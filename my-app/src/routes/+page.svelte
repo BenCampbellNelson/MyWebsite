@@ -26,6 +26,18 @@
 			});
 	}
 
+    function checkGuess(event) {
+        event.preventDefault();
+        const guess = event.target.querySelector('input[name="characterName"]').value;
+        if (character.name.toLowerCase() === guess.toLowerCase()) {
+            
+            fetchRandomCharacter();
+        } else {
+            
+            alert("Incorrect guess, please try again.");
+        }
+    }
+
 	fetchRandomCharacter();
 </script>
 
