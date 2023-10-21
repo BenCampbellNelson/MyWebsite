@@ -6,6 +6,7 @@
 
     const BASE_URL = "https://rickandmortyapi.com"
 
+    function fetchRandomCharacter() {
     fetch(BASE_URL + "/api/character")
     .then((res) => res.json())
     .then((data) => {
@@ -26,6 +27,9 @@
             console.log(character);
         })
     })
+}
+
+fetchRandomCharacter();
 </script>
 
 <h1>{character.name}</h1>
