@@ -8,8 +8,16 @@
         <ul class="nav_list">
 
             <li class="nav_item t-primary-heading">
-
-                <a class="nav_link is-active" href="/"> Home </a>
+                <a class="nav_link is-active" href="/"> HOME </a>
+            </li>
+            <li class="nav_item t-primary-heading">
+                <a class="nav_link is-active" href="/"> TRIVIA </a>
+            </li>
+            <li class="nav_item t-primary-heading">
+                <a class="nav_link is-active" href="/"> CHARACTER GUESS</a>
+            </li>
+            <li class="nav_item t-primary-heading">
+                <a class="nav_link is-active" href="/"> EPISODE GUESS </a>
             </li>
         </ul>
     </div>
