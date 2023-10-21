@@ -36,4 +36,5 @@
 		Guess the character's name:
 		<input type="text" name="characterName" />
 	</label>
+    <button type ="submit">Submit Guess</button>
 </form>
