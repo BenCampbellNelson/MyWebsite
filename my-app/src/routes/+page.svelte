@@ -11,6 +11,7 @@
     .then((data) => {
 
         character_total = data.info.count
+        console.log(data);
         
         let character_id = [];
 
@@ -28,4 +29,4 @@
 </script>
 
 <h1>{character.name}</h1>
-<img src={character.image}>
+<img src={character.image} alt = "characterImage">
