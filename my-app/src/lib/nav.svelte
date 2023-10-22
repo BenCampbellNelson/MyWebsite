@@ -58,7 +58,7 @@
 	}
 
 	.nav_link {
-		display: flex;
+		display: inline-block;
 	}
 
 	.nav_list a {
