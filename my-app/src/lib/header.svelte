@@ -15,7 +15,7 @@
     });
 </script>
 
-<div class="home-container">
+<div class="header-container">
     <header class="header">
         <div class="header_inner">
             <button class="button button--menu" data-ref="trigger" aria-label="Toggle navigation" on:click={toggleNavigation}>
