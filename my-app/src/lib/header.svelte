@@ -22,7 +22,7 @@
 <div class="header-container">
     <header class="header">
         <div class="header_inner">
-            <button class="button button--menu" data-ref="trigger" aria-label="Toggle navigation" on:click={toggleNavigation}>
+            <button class="button button--menu" aria-label="Toggle navigation" on:click={toggleNavigation}>
                 <span>Menu</span>
             </button>
         </div>
@@ -33,10 +33,6 @@
     {/if}
 </div>
 
-<style>
-    .header-container{
-        z-index: -1;
-    }
-</style>
+
 
 

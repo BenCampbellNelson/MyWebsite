@@ -3,6 +3,10 @@
 
 	const dispatch = createEventDispatcher();
 
+    function showNavigation() {
+        dispatch('show');
+    }
+
 	function hideNavigation() {
 		dispatch('hide');
 	}
