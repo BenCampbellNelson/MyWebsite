@@ -34,7 +34,6 @@
 
     .nav_list{
         list-style: none;
-        text-decoration: none;
         display: flex;
         flex-direction: column;
     }
@@ -45,5 +44,8 @@
 
     .nav_list a{
         font-size: 6vw;
+        text-decoration: none;
+        color: green;
+        letter-spacing: -0.03em;
     }
 </style>
