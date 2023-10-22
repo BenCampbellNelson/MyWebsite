@@ -8,7 +8,7 @@
     }
 </script>
 
-<div class ="nav is-active" data-ref="nav">
+<div class ="nav background-image is-active" data-ref="nav">
 
     <div class="nav_background"></div>
     <div class="nav_inner">
@@ -32,6 +32,18 @@
 </div>
 
 <style>
+
+    .nav {
+        width: 100%;
+        height: 100vh;
+    }
+
+.background-image {
+		background-image: url('/images/RickInTheCorner.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+        z-index: 2;
+	}
 
     .t-primary-heading{
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;

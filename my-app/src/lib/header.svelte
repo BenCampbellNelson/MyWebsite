@@ -33,21 +33,4 @@
     {/if}
 </div>
 
-<style>
-    .background-image {
-		background-image: url('/images/RickInTheCorner.jpg');
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-
-    .header-container{
-        width: 100%;
-        height: 100vh;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-    }
-</style>
 
