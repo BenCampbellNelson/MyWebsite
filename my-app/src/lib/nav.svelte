@@ -66,7 +66,7 @@
 		text-decoration: none;
 		color: white;
 		letter-spacing: -0.03em;
-        transition: color 0.3s, transform 0.3s;
+        transition: color 0.3s, transform 0.5s;
 	}
 
     .nav_list a:hover {
