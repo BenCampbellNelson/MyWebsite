@@ -1,4 +1,12 @@
+<script>
+    import { createEventDispatcher} from 'svelte';
 
+    const dispatch = createEventDispatcher();
+
+    function hideNavigation() {
+        dispatch('hide');
+    }
+</script>
 
 <div class ="nav is-active" data-ref="nav">
 
@@ -6,18 +14,17 @@
     <div class="nav_inner">
 
         <ul class="nav_list">
-
             <li class="nav_item t-primary-heading">
-                <a class="nav_link is-active" href="/"> HOME </a>
+                <a class="nav_link is-active" href="/" on:click={hideNavigation}>HOME</a>
             </li>
             <li class="nav_item t-primary-heading">
-                <a class="nav_link is-active" href="/trivia"> TRIVIA </a>
+                <a class="nav_link is-active" href="/trivia" on:click={hideNavigation}>TRIVIA</a>
             </li>
             <li class="nav_item t-primary-heading">
-                <a class="nav_link is-active" href="/character_guess"> CHARACTER GUESS</a>
+                <a class="nav_link is-active" href="/character_guess" on:click={hideNavigation}>CHARACTER GUESS</a>
             </li>
             <li class="nav_item t-primary-heading">
-                <a class="nav_link is-active" href="/episode_guess"> EPISODE GUESS </a>
+                <a class="nav_link is-active" href="/episode_guess" on:click={hideNavigation}>EPISODE GUESS</a>
             </li>
         </ul>
     </div>

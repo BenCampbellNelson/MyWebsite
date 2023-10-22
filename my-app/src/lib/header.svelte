@@ -13,6 +13,10 @@
     onMount(() => {
         isNavigationVisible = false;
     });
+
+    function hideNavigation() {
+        isNavigationVisible = false;
+    }
 </script>
 
 <div class="background-image header-container">
@@ -25,7 +29,7 @@
     </header>
     
     {#if isNavigationVisible}
-        <Nav />
+        <Nav on:hide={hideNavigation}/>
     {/if}
 </div>
 
@@ -41,5 +45,9 @@
         height: 100vh;
     }
 
+    body {
+        margin: 0;
+        padding: 0;
+    }
 </style>
 
