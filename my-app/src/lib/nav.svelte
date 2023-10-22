@@ -64,7 +64,25 @@
 	.nav_list a {
 		font-size: 6vw;
 		text-decoration: none;
-		color: green;
+		color: white;
 		letter-spacing: -0.03em;
+        transition: color 0.3s, transform 0.3s;
 	}
+
+    .nav_list a:hover {
+		animation: portal 1s infinite;
+		transform: scale(1.02); 
+	}
+
+    @keyframes portal {
+		0% {
+			color: white;
+		}
+		50% {
+			color: green; /* Change the color to green midway through the animation */
+		}
+		100% {
+			color: white;
+		}
+    }
 </style>
