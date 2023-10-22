@@ -1,4 +1,5 @@
 <script>
+    
 	let character_total = 0;
 	let character = [];
 

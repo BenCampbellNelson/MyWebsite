@@ -23,3 +23,16 @@
     </div>
 
 </div>
+
+<style>
+
+    .t-primary-heading{
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .nav_list{
+        list-style: none;
+    }
+</style>
