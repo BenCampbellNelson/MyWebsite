@@ -51,7 +51,7 @@
         padding: 15px 30px; /* Increased padding for a bigger button */
         border: none; /* Remove the button border */
         border-radius: 50px; /* Make the button circular */
-        cursor: pointer; /* Show a pointer cursor on hover */
+        cursor: pointer; 
         transition: background-color 0.3s, color 0.3s; 
         box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); 
         font-size: 2em;
