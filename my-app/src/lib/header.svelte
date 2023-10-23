@@ -40,23 +40,27 @@
 
     .header_inner{
         background-color: #262c3a;
+        padding: 20px;
     }
     .button {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-weight: 500;
         text-transform: uppercase;
-        background-color: #000; /* Background color */
-        color: #00ff00; /* Text color */
-        padding: 10px 20px; /* Padding for the button */
+        background-color: white; /* Updated background color */
+        color: #FFFFFF; /* Updated text color */
+        padding: 15px 30px; /* Increased padding for a bigger button */
         border: none; /* Remove the button border */
-        border-radius: 5px; /* Add some rounded corners */
+        border-radius: 50px; /* Make the button circular */
         cursor: pointer; /* Show a pointer cursor on hover */
-        transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+        transition: background-color 0.3s, color 0.3s; 
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); 
+        font-size: 2em;
+        color: black;
     }
 
     .button:hover {
         background-color: #00ff00; /* Change background color on hover */
-        color: #000; /* Change text color on hover */
+        transform: scale(1.1); /* Add a scaling effect on hover for fun */
     }
 </style>
 
