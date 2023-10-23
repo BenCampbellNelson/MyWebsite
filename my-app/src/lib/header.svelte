@@ -38,6 +38,9 @@
         position: relative;
     }
 
+    .header_inner{
+        background-color: #262c3a;
+    }
     .button {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-weight: 500;

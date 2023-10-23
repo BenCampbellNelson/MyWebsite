@@ -63,7 +63,7 @@
 	}
 
 	.nav_list a {
-		font-size: 8vw;
+		font-size: 7.5vw;
 		text-decoration: none;
 		color: white;
 		letter-spacing: -0.03em;
