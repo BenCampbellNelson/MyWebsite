@@ -70,19 +70,7 @@
 	}
 
     .nav_list a:hover {
-		animation: portal 1s infinite;
-		transform: scale(1.02); 
+		transform: scale(1.02);
+        color: green;
 	}
-
-    @keyframes portal {
-		0% {
-			color: white;
-		}
-		50% {
-			color: green; /* Change the color to green midway through the animation */
-		}
-		100% {
-			color: white;
-		}
-    }
 </style>
