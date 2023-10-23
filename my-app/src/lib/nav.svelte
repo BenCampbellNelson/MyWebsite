@@ -49,6 +49,7 @@
 		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 		font-weight: 500;
 		text-transform: uppercase;
+
 	}
 
 	.nav_list {
@@ -62,7 +63,7 @@
 	}
 
 	.nav_list a {
-		font-size: 6vw;
+		font-size: 8vw;
 		text-decoration: none;
 		color: white;
 		letter-spacing: -0.03em;
@@ -71,6 +72,10 @@
 
     .nav_list a:hover {
 		transform: scale(1.02);
-        color: green;
+        color: #00ff00;
 	}
+
+    @media (max-width: 1200px) {
+
+    }
 </style>
