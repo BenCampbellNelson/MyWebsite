@@ -55,6 +55,7 @@
 		list-style: none;
 		display: flex;
 		flex-direction: column;
+        margin: 0;
 	}
 
 	.nav_link {
