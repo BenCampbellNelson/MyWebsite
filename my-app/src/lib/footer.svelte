@@ -3,7 +3,19 @@
 <div class ="footer">
     <h1>this is the footer</h1>
     <div class="footerNav">
-        nav
+        <ul class="nav_list">
+			<li class="nav_item">
+				<a class="nav_link" href="/">HOME</a>
+			</li>
+			<li class="nav_item">
+				<a class="nav_link"  href="/trivia">TRIVIA</a>
+			</li>
+			<li class="nav_item">
+				<a class="nav_link" href="/character_guess">CHARACTER GUESS</a>
+			</li>
+			<li class="nav_item">
+				<a class="nav_link" href="/episode_guess">EPISODE GUESS</a>
+			</li>
     </div>
     <div class ="socialMedia">
         social
