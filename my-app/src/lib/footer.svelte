@@ -33,5 +33,18 @@
         flex-direction: column;
         background-color: #262c3a;
         color: white;
+        align-items: center;
+    }
+
+    .nav_list{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav_item a{
+        text-decoration: none;
+        color: inherit;
+        padding: 5px;
     }
 </style>
