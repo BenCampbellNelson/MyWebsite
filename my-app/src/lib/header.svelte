@@ -39,7 +39,7 @@
     }
 
     .header_inner{
-        background-color: #262c3a;
+        background-color: var(--main-colour);
         padding: 20px;
     }
     .button {
@@ -59,7 +59,7 @@
     }
 
     .button:hover {
-        background-color: #00ff00; /* Change background color on hover */
+        background-color: var(--secondary-colour); /* Change background color on hover */
         transform: scale(1.1); /* Add a scaling effect on hover for fun */
     }
 </style>

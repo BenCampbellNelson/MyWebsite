@@ -31,7 +31,7 @@
         display: flex;
         margin-top: auto;
         flex-direction: column;
-        background-color: #262c3a;
+        background-color: var(--main-colour);
         color: white;
         align-items: center;
     }

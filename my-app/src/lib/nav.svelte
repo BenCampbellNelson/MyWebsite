@@ -72,7 +72,7 @@
 
     .nav_list a:hover {
 		transform: scale(1.02);
-        color: #00ff00;
+        color: var(--secondary-colour);
 	}
 
     @media (max-width: 1200px) {
