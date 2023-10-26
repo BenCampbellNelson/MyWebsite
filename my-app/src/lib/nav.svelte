@@ -42,6 +42,8 @@
 		background-image: url('/images/RickInTheCorner.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
+        position: absolute;
+        z-index: 2;
 	}
 
 	.t-primary-heading {
