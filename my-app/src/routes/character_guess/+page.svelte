@@ -32,6 +32,10 @@
         score++;
     }
 
+    function clearScore() {
+        score = 0;
+    }
+
 	function checkGuess(event) {
 		event.preventDefault();
 		const guess = event.target.querySelector('input[name="characterName"]').value;
@@ -52,6 +56,7 @@
 			}, 3000);
 
 			guessInput = '';
+            clearScore();
 		}
 	}
 
