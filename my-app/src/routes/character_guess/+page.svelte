@@ -28,6 +28,10 @@
 			});
 	}
 
+    function updateScore() {
+        score++;
+    }
+
 	function checkGuess(event) {
 		event.preventDefault();
 		const guess = event.target.querySelector('input[name="characterName"]').value;
@@ -36,6 +40,7 @@
 		if (character.name.toLowerCase() === guess.toLowerCase()) {
 			fetchRandomCharacter();
 			guessInput = ''; // Reset the input field value
+            updateScore();
 		} else {
 			// Display an incorrect guess message
 			messageElement.textContent = 'Incorrect guess, please try again.';
