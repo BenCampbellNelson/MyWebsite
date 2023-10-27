@@ -54,18 +54,35 @@
 
 <div class="pageContainer">
 	<div class="characterGuess">
-		<h1>{character.name}</h1>
-		<img src={character.image} alt="characterImage" />
-		<form on:submit={checkGuess}>
+        <form on:submit={checkGuess}>
 			<label>
 				Guess the character's name:
 				<input type="text" name="characterName" bind:value={guessInput} />
 			</label>
 			<button type="submit">Submit Guess</button>
 		</form>
+		<img src={character.image} alt="characterImage" />
+        <h1>{character.name}</h1>
 		<div id="message" style="display: none;"></div> <!-- Message element -->
 	</div>
 </div>
 
 
+<style>
 
+    .characterGuess{
+        display: flex;
+        flex-direction: column;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    .pageContainer{
+        display: flex;
+        justify-content: center;
+    }
+
+    .img{
+        
+    }
+</style>
