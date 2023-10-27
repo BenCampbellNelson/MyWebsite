@@ -2,8 +2,8 @@
 	let character_total = 0;
 	let character = [];
 	let guessInput = ''; // Added variable to store the input field value
-    let score = 0; //add score variable
-    let characterNameHints = '';
+	let score = 0; //add score variable
+	let characterNameHints = '';
 
 	const BASE_URL = 'https://rickandmortyapi.com';
 
@@ -25,17 +25,30 @@
 					.then((data2) => {
 						character = data2;
 						console.log(character);
+                        generateNameHints();
 					});
 			});
 	}
 
-    function updateScore() {
-        score++;
-    }
+	function generateNameHints() {
+		const name = character.name;
+		let hint = '';
 
-    function clearScore() {
-        score = 0;
-    }
+		for (let i = 0; i < name.length; i++) {
+			// Replace some characters with underscores randomly
+			hint += Math.random() < 0.5 ? name[i] : '_';
+		}
+
+        characterNameHints = hint;
+	}
+
+	function updateScore() {
+		score++;
+	}
+
+	function clearScore() {
+		score = 0;
+	}
 
 	function checkGuess(event) {
 		event.preventDefault();
@@ -45,7 +58,7 @@
 		if (character.name.toLowerCase() === guess.toLowerCase()) {
 			fetchRandomCharacter();
 			guessInput = ''; // Reset the input field value
-            updateScore();
+			updateScore();
 		} else {
 			// Display an incorrect guess message
 			messageElement.textContent = 'Incorrect guess, please try again.';
@@ -57,7 +70,7 @@
 			}, 3000);
 
 			guessInput = '';
-            clearScore();
+			clearScore();
 		}
 	}
 
@@ -67,38 +80,37 @@
 <div class="pageContainer">
 	<div class="characterGuess">
 		<img class="characterImage" src={character.image} alt="characterImage" />
-        <h1>{character.name}</h1>
-        <form on:submit={checkGuess}>
+		<h1>{character.name}</h1>
+        <h1>{characterNameHints}</h1>
+		<form on:submit={checkGuess}>
 			<label>
 				Guess the character's name:
 				<input type="text" name="characterName" bind:value={guessInput} />
 			</label>
 			<button type="submit">Submit Guess</button>
 		</form>
-        <div class="score">Score: {score}</div>
-		<div id="message" style="display: none;"></div> 
+		<div class="score">Score: {score}</div>
+		<div id="message" style="display: none;" />
 	</div>
 </div>
 
-
 <style>
+	.characterGuess {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+	.pageContainer {
+		display: flex;
+		justify-content: center;
+	}
 
-    .characterGuess{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-weight: 500;
-        text-transform: uppercase;
-    }
-    .pageContainer{
-        display: flex;
-        justify-content: center;
-    }
-
-    .characterImage {
-        width: 20vw;
-        height: 20vw;
-        border-radius: 20px;
-    }
+	.characterImage {
+		width: 20vw;
+		height: 20vw;
+		border-radius: 20px;
+	}
 </style>
