@@ -2,6 +2,7 @@
 	let character_total = 0;
 	let character = [];
 	let guessInput = ''; // Added variable to store the input field value
+    let score = 0; //add score variable
 
 	const BASE_URL = 'https://rickandmortyapi.com';
 
@@ -27,6 +28,14 @@
 			});
 	}
 
+    function updateScore() {
+        score++;
+    }
+
+    function clearScore() {
+        score = 0;
+    }
+
 	function checkGuess(event) {
 		event.preventDefault();
 		const guess = event.target.querySelector('input[name="characterName"]').value;
@@ -35,6 +44,7 @@
 		if (character.name.toLowerCase() === guess.toLowerCase()) {
 			fetchRandomCharacter();
 			guessInput = ''; // Reset the input field value
+            updateScore();
 		} else {
 			// Display an incorrect guess message
 			messageElement.textContent = 'Incorrect guess, please try again.';
@@ -46,6 +56,7 @@
 			}, 3000);
 
 			guessInput = '';
+            clearScore();
 		}
 	}
 
@@ -54,6 +65,8 @@
 
 <div class="pageContainer">
 	<div class="characterGuess">
+		<img class="characterImage" src={character.image} alt="characterImage" />
+        <h1>{character.name}</h1>
         <form on:submit={checkGuess}>
 			<label>
 				Guess the character's name:
@@ -61,8 +74,7 @@
 			</label>
 			<button type="submit">Submit Guess</button>
 		</form>
-		<img src={character.image} alt="characterImage" />
-        <h1>{character.name}</h1>
+        <div class="score">Score: {score}</div>
 		<div id="message" style="display: none;"></div> <!-- Message element -->
 	</div>
 </div>
@@ -82,7 +94,9 @@
         justify-content: center;
     }
 
-    .img{
-        
+    .characterImage {
+        width: 20vw;
+        height: 20vw;
+        border-radius: 20px;
     }
 </style>
