@@ -67,7 +67,7 @@
 			</label>
 			<button type="submit">Submit Guess</button>
 		</form>
-		<img src={character.image} alt="characterImage" />
+		<img class="characterImage" src={character.image} alt="characterImage" />
         <h1>{character.name}</h1>
         <div class="score">Score: {score}</div>
 		<div id="message" style="display: none;"></div> <!-- Message element -->
@@ -89,7 +89,9 @@
         justify-content: center;
     }
 
-    .img{
-
+    .characterImage {
+        width: 20vw;
+        height: 20vw;
+        border-radius: 20px;
     }
 </style>
