@@ -2,6 +2,7 @@
 	let character_total = 0;
 	let character = [];
 	let guessInput = ''; // Added variable to store the input field value
+    let score = 0; //add score variable
 
 	const BASE_URL = 'https://rickandmortyapi.com';
 
@@ -83,6 +84,6 @@
     }
 
     .img{
-        
+
     }
 </style>
