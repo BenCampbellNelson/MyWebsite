@@ -65,6 +65,8 @@
 
 <div class="pageContainer">
 	<div class="characterGuess">
+		<img class="characterImage" src={character.image} alt="characterImage" />
+        <h1>{character.name}</h1>
         <form on:submit={checkGuess}>
 			<label>
 				Guess the character's name:
@@ -72,8 +74,6 @@
 			</label>
 			<button type="submit">Submit Guess</button>
 		</form>
-		<img class="characterImage" src={character.image} alt="characterImage" />
-        <h1>{character.name}</h1>
         <div class="score">Score: {score}</div>
 		<div id="message" style="display: none;"></div> <!-- Message element -->
 	</div>
