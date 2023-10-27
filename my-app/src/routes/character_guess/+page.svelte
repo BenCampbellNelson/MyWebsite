@@ -64,6 +64,7 @@
 		</form>
 		<img src={character.image} alt="characterImage" />
         <h1>{character.name}</h1>
+        <div class="score">Score: {score}</div>
 		<div id="message" style="display: none;"></div> <!-- Message element -->
 	</div>
 </div>
