@@ -3,6 +3,7 @@
 	let character = [];
 	let guessInput = ''; // Added variable to store the input field value
     let score = 0; //add score variable
+    let characterNameHints = '';
 
 	const BASE_URL = 'https://rickandmortyapi.com';
 
@@ -75,7 +76,7 @@
 			<button type="submit">Submit Guess</button>
 		</form>
         <div class="score">Score: {score}</div>
-		<div id="message" style="display: none;"></div> <!-- Message element -->
+		<div id="message" style="display: none;"></div> 
 	</div>
 </div>
 
@@ -85,6 +86,7 @@
     .characterGuess{
         display: flex;
         flex-direction: column;
+        align-items: center;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-weight: 500;
         text-transform: uppercase;
