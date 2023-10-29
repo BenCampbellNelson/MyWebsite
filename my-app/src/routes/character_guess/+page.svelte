@@ -146,8 +146,8 @@
 	}
 
 	.characterImage {
-		width: 20vw;
-		height: 20vw;
+		max-width: 100%;
+		height: auto;
 		border-radius: 20px;
 	}
 
