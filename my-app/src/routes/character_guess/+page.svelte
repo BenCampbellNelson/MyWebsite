@@ -103,7 +103,7 @@
 		<form on:submit={checkGuess}>
 			<label>
 				Guess the character's name:
-				<input type="text" name="characterName" bind:value={guessInput} />
+				<input type="text" name="characterName" bind:value={guessInput} style="width: 100%; font-size: 1em;"/>
 			</label>
 			<button type="submit">Submit Guess</button>
 		</form>
@@ -129,6 +129,11 @@
 		text-transform: uppercase;
         font-size: 2vw;
 	}
+
+    .characterGuess form {
+        display: flex;
+        flex-direction: column;
+    }
 	.pageContainer {
 		display: flex;
 		justify-content: center;
