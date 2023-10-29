@@ -109,12 +109,12 @@
 		</form>
 		<div class="score">Score: {score}</div>
 		<div id="message" style="display: none;" />
-        <div class="hint">
+        
 			{#if showHints}
 				<h1>{characterNameHints}</h1>
 			{/if}
 			<button class="hint-button" on:click={toggleHints}>Show Hints</button>
-		</div>
+	
 
 	</div>
 </div>
@@ -140,7 +140,7 @@
 		border-radius: 20px;
 	}
 
-    .hint button, form button[type="submit"] {
+    .hint-button, form button[type="submit"] {
         background-color: #007bff; /* Blue background color */
         color: white; /* White text color */
         border: none; /* Remove border */
@@ -149,10 +149,5 @@
         cursor: pointer; /* Add a pointer cursor on hover */
         border-radius: 5px; /* Rounded corners */
     }
-
-    .hint-button {
-        display: flex;
-    }
-
 
 </style>
