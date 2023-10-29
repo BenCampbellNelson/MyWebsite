@@ -105,7 +105,7 @@
 	<div class="characterGuess">
 		<img class="characterImage" src={character.image} alt="characterImage" />
 		<h1>{character.name}</h1>
-		<button on:click={skipToNextCharacter}>Skip to Next Character</button>
+		<button class="skip-button" on:click={skipToNextCharacter}>Skip to Next Character</button>
 		<form on:submit={checkGuess}>
 			<label>
 				Guess the character's name:
@@ -120,20 +120,18 @@
 		</form>
 		<div class="score">Score: {score}</div>
 		<div id="message" style="display: none;" />
-        <button class="hint-button" on:click={toggleHints}>Show Hints</button>
-        <div class="hint">
-		    {#if showHints}
-			    <h1>{characterNameHints}</h1>
-		    {/if}
-        </div>
+		<button class="hint-button" on:click={toggleHints}>Show Hints</button>
+		<div class="hint">
+			{#if showHints}
+				<h1>{characterNameHints}</h1>
+			{/if}
+		</div>
 	</div>
 </div>
 
 <style>
-
-    .hint {
-
-    }
+	.hint {
+	}
 	.characterGuess {
 		display: flex;
 		flex-direction: column;
@@ -160,19 +158,20 @@
 	}
 
 	.hint-button,
-	form button[type='submit'] {
+	form button[type='submit'], .skip-button {
 		background-color: #007bff;
 		color: white;
 		border: none;
-		padding: 2% 4%; 
+		padding: 2% 4%;
 		margin: 10px;
 		cursor: pointer;
-		border-radius: 5px;
+		border-radius: 50px;
+        text-transform: uppercase;
 	}
 
-    @media (max-width: 800px) {
-  .characterGuess {
-    font-size: 3vw; /* Adjust as needed */
-  }
-}
+	@media (max-width: 800px) {
+		.characterGuess {
+			font-size: 3vw; 
+		}
+	}
 </style>
