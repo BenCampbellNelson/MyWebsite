@@ -104,16 +104,15 @@
 <div class="pageContainer">
 	<div class="characterGuess">
 		<img class="characterImage" src={character.image} alt="characterImage" />
-		<h1>{character.name}</h1>
 		<button class="skip-button" on:click={skipToNextCharacter}>Skip to Next Character</button>
 		<form on:submit={checkGuess}>
-			<label>
+			<label class="input">
 				Guess the character's name:
 				<input
 					type="text"
 					name="characterName"
 					bind:value={guessInput}
-					style="width: 100%; font-size: 1em;"
+					style="width: 100%; font-size: 1em; border-radius: 50px;"
 				/>
 			</label>
 			<button type="submit">Submit Guess</button>
@@ -132,6 +131,12 @@
 <style>
 	.hint {
 	}
+
+    .input{
+        display: flex;
+        flex-direction: column;
+        
+    }
 	.characterGuess {
 		display: flex;
 		flex-direction: column;
@@ -167,6 +172,7 @@
 		cursor: pointer;
 		border-radius: 50px;
         text-transform: uppercase;
+        font-weight: 500;
 	}
 
 	@media (max-width: 800px) {
