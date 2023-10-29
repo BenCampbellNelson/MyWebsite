@@ -36,7 +36,7 @@
 
     for (let i = 0; i < name.length; i++) {
         // Check if the character is a special character
-        const isSpecialCharacter = /[+\\-\\""]/.test(name[i]); 
+        const isSpecialCharacter = /[+\\-\\' ']/.test(name[i]); 
 
         // Replace only regular characters with underscores randomly
         hint += isSpecialCharacter || Math.random() < 0.5 ? name[i] : '_';
