@@ -4,6 +4,7 @@
 	let guessInput = ''; // Added variable to store the input field value
 	let score = 0; //add score variable
 	let characterNameHints = '';
+    let showHints = false;
 
 	const BASE_URL = 'https://rickandmortyapi.com';
 
@@ -45,6 +46,16 @@
     characterNameHints = hint;
 }
 
+function toggleHints() {
+        showHints = !showHints;
+
+        if (showHints) {
+            generateNameHints(); // Generate hints if showHints is true
+        } else {
+            characterNameHints = '';
+        }
+    }
+
 
 	function updateScore() {
 		score++;
@@ -71,11 +82,9 @@
 			guessInput = ''; // Reset the input field value
 			updateScore();
 		} else {
-			// Display an incorrect guess message
 			messageElement.textContent = 'Incorrect guess, please try again.';
 			messageElement.style.display = 'block';
 
-			// Hide the message after a few seconds (e.g., 3 seconds)
 			setTimeout(() => {
 				messageElement.style.display = 'none';
 			}, 3000);
@@ -92,7 +101,11 @@
 	<div class="characterGuess">
 		<img class="characterImage" src={character.image} alt="characterImage" />
 		<h1>{character.name}</h1>
+        {#if showHints}
         <h1>{characterNameHints}</h1>
+        {/if}
+        <button on:click={toggleHints}>Show Hints</button>
+
 		<form on:submit={checkGuess}>
 			<label>
 				Guess the character's name:
