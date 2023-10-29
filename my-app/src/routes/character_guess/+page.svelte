@@ -95,33 +95,36 @@
 
 	fetchRandomCharacter();
 
-    function skipToNextCharacter() {
-        fetchRandomCharacter(); // Fetch a new random character
-        guessInput = ''; // Reset the input field value
-    }
+	function skipToNextCharacter() {
+		fetchRandomCharacter(); // Fetch a new random character
+		guessInput = ''; // Reset the input field value
+	}
 </script>
 
 <div class="pageContainer">
 	<div class="characterGuess">
 		<img class="characterImage" src={character.image} alt="characterImage" />
 		<h1>{character.name}</h1>
-        <button on:click={skipToNextCharacter}>Skip to Next Character</button>
+		<button on:click={skipToNextCharacter}>Skip to Next Character</button>
 		<form on:submit={checkGuess}>
 			<label>
 				Guess the character's name:
-				<input type="text" name="characterName" bind:value={guessInput} style="width: 100%; font-size: 1em;"/>
+				<input
+					type="text"
+					name="characterName"
+					bind:value={guessInput}
+					style="width: 100%; font-size: 1em;"
+				/>
 			</label>
 			<button type="submit">Submit Guess</button>
 		</form>
 		<div class="score">Score: {score}</div>
 		<div id="message" style="display: none;" />
-        
-			{#if showHints}
-				<h1>{characterNameHints}</h1>
-			{/if}
-			<button class="hint-button" on:click={toggleHints}>Show Hints</button>
-	
 
+		{#if showHints}
+			<h1>{characterNameHints}</h1>
+		{/if}
+		<button class="hint-button" on:click={toggleHints}>Show Hints</button>
 	</div>
 </div>
 
@@ -133,13 +136,13 @@
 		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 		font-weight: 500;
 		text-transform: uppercase;
-        font-size: 2vw;
+		font-size: 2vw;
 	}
 
-    .characterGuess form {
-        display: flex;
-        flex-direction: column;
-    }
+	.characterGuess form {
+		display: flex;
+		flex-direction: column;
+	}
 	.pageContainer {
 		display: flex;
 		justify-content: center;
@@ -151,14 +154,20 @@
 		border-radius: 20px;
 	}
 
-    .hint-button, form button[type="submit"] {
-        background-color: #007bff; /* Blue background color */
-        color: white; /* White text color */
-        border: none; /* Remove border */
-        padding: 10px 20px; /* Add padding to the button */
-        margin: 10px; /* Add margin to the button */
-        cursor: pointer; /* Add a pointer cursor on hover */
-        border-radius: 5px; /* Rounded corners */
-    }
+	.hint-button,
+	form button[type='submit'] {
+		background-color: #007bff;
+		color: white;
+		border: none;
+		padding: 2% 4%; /* Adjust padding as needed */
+		margin: 10px;
+		cursor: pointer;
+		border-radius: 5px;
+	}
 
+    @media (max-width: 800px) {
+  .characterGuess {
+    font-size: 3vw; /* Adjust as needed */
+  }
+}
 </style>
