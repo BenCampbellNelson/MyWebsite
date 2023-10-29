@@ -31,16 +31,20 @@
 	}
 
 	function generateNameHints() {
-		const name = character.name;
-		let hint = '';
+    const name = character.name;
+    let hint = '';
 
-		for (let i = 0; i < name.length; i++) {
-			// Replace some characters with underscores randomly
-			hint += Math.random() < 0.5 ? name[i] : '_';
-		}
+    for (let i = 0; i < name.length; i++) {
+        // Check if the character is a special character
+        const isSpecialCharacter = /[+\\-]/.test(name[i]); 
 
-        characterNameHints = hint;
-	}
+        // Replace only regular characters with underscores randomly
+        hint += isSpecialCharacter || Math.random() < 0.5 ? name[i] : '_';
+    }
+
+    characterNameHints = hint;
+}
+
 
 	function updateScore() {
 		score++;
