@@ -34,6 +34,8 @@
         background-color: var(--main-colour);
         color: white;
         align-items: center;
+        font-size: 1vw;
+        font-family: var(--main-font-family);
     }
 
     .nav_list{
@@ -47,4 +49,11 @@
         color: inherit;
         padding: 5px;
     }
+
+    @media (max-width: 800px) {
+    .footer {
+        font-size: 3vw; 
+    }
+
+}
 </style>

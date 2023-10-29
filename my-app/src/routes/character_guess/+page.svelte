@@ -120,20 +120,25 @@
 		</form>
 		<div class="score">Score: {score}</div>
 		<div id="message" style="display: none;" />
-
-		{#if showHints}
-			<h1>{characterNameHints}</h1>
-		{/if}
-		<button class="hint-button" on:click={toggleHints}>Show Hints</button>
+        <button class="hint-button" on:click={toggleHints}>Show Hints</button>
+        <div class="hint">
+		    {#if showHints}
+			    <h1>{characterNameHints}</h1>
+		    {/if}
+        </div>
 	</div>
 </div>
 
 <style>
+
+    .hint {
+
+    }
 	.characterGuess {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		font-family: var(--main-font-family);
 		font-weight: 500;
 		text-transform: uppercase;
 		font-size: 2vw;
@@ -159,7 +164,7 @@
 		background-color: #007bff;
 		color: white;
 		border: none;
-		padding: 2% 4%; /* Adjust padding as needed */
+		padding: 2% 4%; 
 		margin: 10px;
 		cursor: pointer;
 		border-radius: 5px;

@@ -47,7 +47,7 @@
 	}
 
 	.t-primary-heading {
-		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		font-family: var(--main-font-family);
 		font-weight: 500;
 		text-transform: uppercase;
 
