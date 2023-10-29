@@ -4,7 +4,7 @@
 	let guessInput = ''; // Added variable to store the input field value
 	let score = 0; //add score variable
 	let characterNameHints = '';
-    let showHints = false;
+	let showHints = false;
 
 	const BASE_URL = 'https://rickandmortyapi.com';
 
@@ -26,36 +26,35 @@
 					.then((data2) => {
 						character = data2;
 						console.log(character);
-                        generateNameHints();
+						generateNameHints();
 					});
 			});
 	}
 
 	function generateNameHints() {
-    const name = character.name;
-    let hint = '';
+		const name = character.name;
+		let hint = '';
 
-    for (let i = 0; i < name.length; i++) {
-        // Check if the character is a special character
-        const isSpecialCharacter = /[+\\-\\' ']/.test(name[i]); 
+		for (let i = 0; i < name.length; i++) {
+			// Check if the character is a special character
+			const isSpecialCharacter = /[+\\-\\' ']/.test(name[i]);
 
-        // Replace only regular characters with underscores randomly
-        hint += isSpecialCharacter || Math.random() < 0.5 ? name[i] : '_';
-    }
+			// Replace only regular characters with underscores randomly
+			hint += isSpecialCharacter || Math.random() < 0.5 ? name[i] : '_';
+		}
 
-    characterNameHints = hint;
-}
+		characterNameHints = hint;
+	}
 
-function toggleHints() {
-        showHints = !showHints;
+	function toggleHints() {
+		showHints = !showHints;
 
-        if (showHints) {
-            generateNameHints(); // Generate hints if showHints is true
-        } else {
-            characterNameHints = '';
-        }
-    }
-
+		if (showHints) {
+			generateNameHints(); // Generate hints if showHints is true
+		} else {
+			characterNameHints = '';
+		}
+	}
 
 	function updateScore() {
 		score++;
@@ -71,7 +70,7 @@ function toggleHints() {
 		const messageElement = document.getElementById('message');
 
 		if (character.name.toLowerCase() === guess.toLowerCase()) {
-            messageElement.textContent = 'Correct!';
+			messageElement.textContent = 'Correct!';
 			messageElement.style.display = 'block';
 
 			// Hide the message after a few seconds (e.g., 3 seconds)
@@ -101,11 +100,6 @@ function toggleHints() {
 	<div class="characterGuess">
 		<img class="characterImage" src={character.image} alt="characterImage" />
 		<h1>{character.name}</h1>
-        {#if showHints}
-        <h1>{characterNameHints}</h1>
-        {/if}
-        <button on:click={toggleHints}>Show Hints</button>
-
 		<form on:submit={checkGuess}>
 			<label>
 				Guess the character's name:
@@ -115,6 +109,13 @@ function toggleHints() {
 		</form>
 		<div class="score">Score: {score}</div>
 		<div id="message" style="display: none;" />
+        <div class="hint">
+			{#if showHints}
+				<h1>{characterNameHints}</h1>
+			{/if}
+			<button class="hint-button" on:click={toggleHints}>Show Hints</button>
+		</div>
+
 	</div>
 </div>
 
@@ -126,6 +127,7 @@ function toggleHints() {
 		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 		font-weight: 500;
 		text-transform: uppercase;
+        font-size: 2vw;
 	}
 	.pageContainer {
 		display: flex;
@@ -137,4 +139,20 @@ function toggleHints() {
 		height: 20vw;
 		border-radius: 20px;
 	}
+
+    .hint button, form button[type="submit"] {
+        background-color: #007bff; /* Blue background color */
+        color: white; /* White text color */
+        border: none; /* Remove border */
+        padding: 10px 20px; /* Add padding to the button */
+        margin: 10px; /* Add margin to the button */
+        cursor: pointer; /* Add a pointer cursor on hover */
+        border-radius: 5px; /* Rounded corners */
+    }
+
+    .hint-button {
+        display: flex;
+    }
+
+
 </style>
