@@ -60,6 +60,13 @@
 		const messageElement = document.getElementById('message');
 
 		if (character.name.toLowerCase() === guess.toLowerCase()) {
+            messageElement.textContent = 'Correct!';
+			messageElement.style.display = 'block';
+
+			// Hide the message after a few seconds (e.g., 3 seconds)
+			setTimeout(() => {
+				messageElement.style.display = 'none';
+			}, 3000);
 			fetchRandomCharacter();
 			guessInput = ''; // Reset the input field value
 			updateScore();
