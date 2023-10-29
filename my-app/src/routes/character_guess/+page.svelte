@@ -94,12 +94,18 @@
 	}
 
 	fetchRandomCharacter();
+
+    function skipToNextCharacter() {
+        fetchRandomCharacter(); // Fetch a new random character
+        guessInput = ''; // Reset the input field value
+    }
 </script>
 
 <div class="pageContainer">
 	<div class="characterGuess">
 		<img class="characterImage" src={character.image} alt="characterImage" />
 		<h1>{character.name}</h1>
+        <button on:click={skipToNextCharacter}>Skip to Next Character</button>
 		<form on:submit={checkGuess}>
 			<label>
 				Guess the character's name:
