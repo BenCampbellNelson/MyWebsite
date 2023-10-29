@@ -123,7 +123,7 @@
 		</form>
 		<div class="score">Score: {score}</div>
 		<div id="message" style="display: none;" />
-		<button class="hint-button" on:click={toggleHints}>Show Hints</button>
+		<button class="hint-button" on:click={toggleHints}>Show Hint</button>
 		<div class="hint">
 			{#if showHints}
 				<h1>{characterNameHints}</h1>
