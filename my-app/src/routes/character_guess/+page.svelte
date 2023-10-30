@@ -30,7 +30,7 @@
 					});
 			});
 
-		scoreMinus();
+		showHints = false;
 	}
 
 	function generateNameHints() {
@@ -48,9 +48,7 @@
 				hint += ' ';
 			}
 		}
-
 		characterNameHints = hint;
-		scoreMinus();
 	}
 
 	function toggleHints() {
@@ -112,9 +110,8 @@
 <div class="pageContainer">
 	<div class="characterGuess">
 		<img class="characterImage" src={character.image} alt="characterImage" />
-		<button class="skip-button" on:click={fetchRandomCharacter}
-			>Skip to Next Character (-1 point)</button
-		>
+		<button class="skip-button" on:click={() => { scoreMinus(); fetchRandomCharacter(); }}>Skip to Next Character (-1 point)</button>
+
 		<form on:submit={checkGuess}>
 			<label class="input">
 				Guess the character's name:
@@ -129,7 +126,7 @@
 		</form>
 		<div class="score">Score: {score}</div>
 		<div id="message" style="display: none;" />
-		<button class="hint-button" on:click={toggleHints}>Show Hint</button>
+		<button class="hint-button" on:click={() => { scoreMinus(); toggleHints(); }}>Show Hint</button>
 		<div class="hint">
 			{#if showHints}
 				<h1>{characterNameHints}</h1>
