@@ -29,6 +29,8 @@
 						generateNameHints();
 					});
 			});
+
+		scoreMinus();
 	}
 
 	function generateNameHints() {
@@ -41,9 +43,14 @@
 
 			// Replace only regular characters with underscores randomly
 			hint += isSpecialCharacter || Math.random() < 0.5 ? name[i] : '_';
+
+			if (i < name.length - 1) {
+				hint += ' ';
+			}
 		}
 
 		characterNameHints = hint;
+		scoreMinus();
 	}
 
 	function toggleHints() {
@@ -64,16 +71,11 @@
 		score = 0;
 	}
 
-    function skipToNextCharacter() {
-        if (score >= 1)
-        {
-            score--;
-        }
-		fetchRandomCharacter(); // Fetch a new random character
-		guessInput = ''; // Reset the input field value
+	function scoreMinus() {
+		if (score >= 1) {
+			score--;
+		}
 	}
-
-    
 
 	function checkGuess(event) {
 		event.preventDefault();
@@ -105,13 +107,14 @@
 	}
 
 	fetchRandomCharacter();
-
 </script>
 
 <div class="pageContainer">
 	<div class="characterGuess">
 		<img class="characterImage" src={character.image} alt="characterImage" />
-		<button class="skip-button" on:click={skipToNextCharacter}>Skip to Next Character (-1 point)</button>
+		<button class="skip-button" on:click={fetchRandomCharacter}
+			>Skip to Next Character (-1 point)</button
+		>
 		<form on:submit={checkGuess}>
 			<label class="input">
 				Guess the character's name:
@@ -139,11 +142,10 @@
 	.hint {
 	}
 
-    .input{
-        display: flex;
-        flex-direction: column;
-        
-    }
+	.input {
+		display: flex;
+		flex-direction: column;
+	}
 	.characterGuess {
 		display: flex;
 		flex-direction: column;
@@ -170,7 +172,8 @@
 	}
 
 	.hint-button,
-	form button[type='submit'], .skip-button {
+	form button[type='submit'],
+	.skip-button {
 		background-color: #007bff;
 		color: white;
 		border: none;
@@ -178,13 +181,13 @@
 		margin: 10px;
 		cursor: pointer;
 		border-radius: 50px;
-        text-transform: uppercase;
-        font-weight: 500;
+		text-transform: uppercase;
+		font-weight: 500;
 	}
 
 	@media (max-width: 800px) {
 		.characterGuess {
-			font-size: 5vw; 
+			font-size: 5vw;
 		}
 	}
 </style>

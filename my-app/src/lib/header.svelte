@@ -46,11 +46,11 @@
         font-family: var(--main-font-family);
         font-weight: 500;
         text-transform: uppercase;
-        background-color: white; /* Updated background color */
-        color: #FFFFFF; /* Updated text color */
-        padding: 15px 30px; /* Increased padding for a bigger button */
-        border: none; /* Remove the button border */
-        border-radius: 50px; /* Make the button circular */
+        background-color: white; 
+        color: #FFFFFF; 
+        padding: 15px 30px; 
+        border: none; 
+        border-radius: 50px; 
         cursor: pointer; 
         transition: background-color 0.3s, color 0.3s; 
         box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); 
@@ -59,8 +59,8 @@
     }
 
     .button:hover {
-        background-color: var(--secondary-colour); /* Change background color on hover */
-        transform: scale(1.1); /* Add a scaling effect on hover for fun */
+        background-color: var(--secondary-colour); 
+        transform: scale(1.1);
     }
 </style>
 
