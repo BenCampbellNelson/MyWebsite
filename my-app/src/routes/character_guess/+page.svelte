@@ -64,6 +64,17 @@
 		score = 0;
 	}
 
+    function skipToNextCharacter() {
+        if (score >= 1)
+        {
+            score--;
+        }
+		fetchRandomCharacter(); // Fetch a new random character
+		guessInput = ''; // Reset the input field value
+	}
+
+    
+
 	function checkGuess(event) {
 		event.preventDefault();
 		const guess = event.target.querySelector('input[name="characterName"]').value;
@@ -95,14 +106,6 @@
 
 	fetchRandomCharacter();
 
-	function skipToNextCharacter() {
-        if (score >= 1)
-        {
-            score--;
-        }
-		fetchRandomCharacter(); // Fetch a new random character
-		guessInput = ''; // Reset the input field value
-	}
 </script>
 
 <div class="pageContainer">
@@ -181,7 +184,7 @@
 
 	@media (max-width: 800px) {
 		.characterGuess {
-			font-size: 3vw; 
+			font-size: 5vw; 
 		}
 	}
 </style>
