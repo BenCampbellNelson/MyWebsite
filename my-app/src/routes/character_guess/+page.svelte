@@ -27,6 +27,8 @@
 						character = data2;
 						console.log(character);
 						generateNameHints();
+
+						localStorage.setItem('characterData', JSON.stringify(character));
 					});
 			});
 
