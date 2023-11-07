@@ -12,18 +12,18 @@
 	<div class="nav_background" />
 	<div class="nav_inner">
 		<ul class="nav_list">
-			<li class="nav_item t-primary-heading">
+			<li class="nav_item heading">
 				<a class="nav_link is-active" href="/" on:click={hideNavigation}>HOME</a>
 			</li>
-			<li class="nav_item t-primary-heading">
+			<li class="nav_item heading">
 				<a class="nav_link is-active" href="/trivia" on:click={hideNavigation}>TRIVIA</a>
 			</li>
-			<li class="nav_item t-primary-heading">
+			<li class="nav_item heading">
 				<a class="nav_link is-active" href="/character_guess" on:click={hideNavigation}
 					>CHARACTER GUESS</a
 				>
 			</li>
-			<li class="nav_item t-primary-heading">
+			<li class="nav_item heading">
 				<a class="nav_link is-active" href="/episode_guess" on:click={hideNavigation}
 					>EPISODE GUESS</a
 				>
@@ -46,7 +46,7 @@
         z-index: 2;
 	}
 
-	.t-primary-heading {
+	.heading {
 		font-family: var(--main-font-family);
 		font-weight: 500;
 		text-transform: uppercase;
