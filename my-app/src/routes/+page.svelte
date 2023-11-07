@@ -1,28 +1,26 @@
 
 <div class="page-title">
     <div class="page-title_inner">
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        <h1 class="page-title t-title">HOME PAGE</h1>
-        
+        <div class="content-box">
+            <div class="flex-box">
+                <div class="image">
+                    <img src="images/RickandMortyPortal.jpg" alt="Description of the image">
+                </div>
+                <div class="text">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="content-box">
+            <div class="flex-box alternate">
+                <div class="text">
+                   
+                </div>
+                <div class="image">
+                </div>
+            </div>
+        </div>
     </div>
-
 </div>
+
 
