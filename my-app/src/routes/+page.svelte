@@ -120,7 +120,6 @@
 		border: 2px solid #000;
 		border-radius: 10px;
 		margin: 20px;
-		height: 500px;
 		padding: 20px;
 		background-color: #b5edfc;
 	}
@@ -148,7 +147,6 @@
 		flex-direction: column;
 		padding: 20px;
 		font-family: var(--main-font-family);
-		overflow: hidden; /* Add this to prevent overflow */
 	}
 
 	h2 {
