@@ -1,119 +1,87 @@
-<div class="page-title">
-	<div class="page-title-inner">
-		<div class="content-box">
-			<div class="image">
-				<img src="images/justinRoiland.webp" alt="image" />
-			</div>
-			<div class="text">
-				<h2>
-					Mark Justin Roiland was a writer, animator, director, producer and the co-creator of Rick
-					and Morty as well as the voice of Rick and Morty from Season 1 to Season 6. As of January
-					24, 2023, he has been dismissed from the series amid charges of domestic abuse and his
-					voice roles will be recast with soundalike actors starting with Season 7.[1][2] Following
-					his firing, the charges had been dismissed for insufficient evidence, but allegations of
-					sexual assault were reported against him.
-				</h2>
-			</div>
-		</div>
 
-		<div class="content-box">
-			<div class="text">
-				<h2>
-					Dan Harmon is a writer, producer, actor and the co-creator of Rick and Morty as well as an
-					executive producer for the series. As of January 24, 2023, he is the sole showrunner of
-					the series, as Adult Swim severed its ties with co-creator Justin Roiland and fired him
-					from the series amid charges of domestic abuse.[1]
-				</h2>
-			</div>
-			<div class="image">
-				<img src="images/RickandMortyPortal.jpg" alt="image" />
-			</div>
-		</div>
-
-		<div class="content-box">
-			<div class="image">
-				<img src="images/RickandMortyPortal.jpg" alt="image" />
-			</div>
-			<div class="text">
-				<h2>
-					Mark Justin Roiland was a writer, animator, director, producer and the co-creator of Rick
-					and Morty as well as the voice of Rick and Morty from Season 1 to Season 6. As of January
-					24, 2023, he has been dismissed from the series amid charges of domestic abuse and his
-					voice roles will be recast with soundalike actors starting with Season 7.[1][2] Following
-					his firing, the charges had been dismissed for insufficient evidence, but allegations of
-					sexual assault were reported against him.
-				</h2>
-			</div>
-		</div>
-
-		<div class="content-box">
-			<div class="text">
-				<h2>
-					Dan Harmon is a writer, producer, actor and the co-creator of Rick and Morty as well as an
-					executive producer for the series. As of January 24, 2023, he is the sole showrunner of
-					the series, as Adult Swim severed its ties with co-creator Justin Roiland and fired him
-					from the series amid charges of domestic abuse.[1]
-				</h2>
-			</div>
-			<div class="image">
-				<img src="images/justinRoiland.webp" alt="image" />
-			</div>
-		</div>
-	</div>
+<div class="page-inner">
+<div class="card">
+    <div class="content">
+        <div class="image">
+            <img src="images/justinRoiland.webp" alt="Justin Roiland" />
+        </div>
+        <div class="text">
+            <h2>Mark Justin Roiland</h2>
+            <p>
+                Mark Justin Roiland is a writer, animator, director, producer, and the co-creator of the
+                popular show "Rick and Morty." He provided the voices for Rick and Morty from Season 1 to
+                Season 6. However, as of January 24, 2023, he has been dismissed from the series amid
+                charges of domestic abuse. His voice roles will be recast with soundalike actors starting with
+                Season 7. It's important to note that following his firing, the charges were dismissed due
+                to insufficient evidence, but allegations of sexual assault were reported against him.
+            </p>
+        </div>
+    </div>
 </div>
 
+<div class="card">
+    <div class="content">
+        <div class="text">
+            <h2>Dan Harmon</h2>
+            <p>
+                Dan Harmon is a writer, producer, actor, and the co-creator of "Rick and Morty." He has also
+                served as an executive producer for the series. As of January 24, 2023, he is the sole
+                showrunner of the series. This decision was made by Adult Swim after severing ties with
+                co-creator Justin Roiland, who was fired from the series amid charges of domestic abuse.
+            </p>
+        </div>
+        <div class="image">
+            <img src="images/Dan_Harmon1.webp" alt="Dan Harmon" />
+        </div>
+    </div>
+</div>
+</div>
 <style>
-	.content-box {
-		display: flex;
-		width: 100%;
-		border-color: black;
-		border-style: dashed;
-		padding: 10px;
-	}
+    .card {
+        display: flex;
+        border: 2px solid #000;
+        border-radius: 10px;
+        margin: 20px;
+        height: 500px;
+        padding: 20px;
+    }
 
-	.image {
-		flex: 0 0 600px;
-		height: 600px;
-		overflow: hidden;
-	}
+    .content {
+        display: flex;
+        flex: 1;
+    }
 
-	.image img {
-		width: 100%;
-		height: 100%;
-	}
-	.text {
-		flex: 1;
-	}
+    .image {
+        flex: 1;
+    }
 
-	.page-title-inner {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		max-width: 80%;
-		margin: 0 auto;
-		padding: 20px;
-	}
+    .image img {
+        max-width: 50%;
+        max-height: 100%;
+        border-radius: 10px;
+    }
 
-	@media (max-width: 1200px) {
-		.image {
-			flex: 0 0 300px;
-			height: 300px;
-			overflow: hidden;
-            align-items: center;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-		}
+    .text {
+        flex: 1;
+        padding: 20px;
+        font-family: var(--main-font-family);
+    }
 
-		.content-box {
-			display: flex;
-			flex-direction: column;
-		}
+    h2 {
+        font-size: 24px;
+        color: white;
+    }
 
-        .image img {
-		width: 50%; 
-		height: 100%;
-	}
-	}
+    p {
+        font-size: 16px;
+        color: white;
+    }
+
+    @media (max-width: 800px) {
+
+        .content{
+            flex-direction: column;
+        }
+    }
 </style>
+
