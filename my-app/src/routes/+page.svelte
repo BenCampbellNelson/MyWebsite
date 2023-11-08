@@ -39,10 +39,10 @@
 <div class="card">
     <div class="content">
         <div class="image">
-            <img src="images/justinRoiland.webp" alt="Justin Roiland" />
+            <img src="images/Ian_Cardoni.webp" alt="Ian Cardoni" />
         </div>
         <div class="text">
-            <h2>Mark Justin Roiland</h2>
+            <h2>Ian Cardoni</h2>
             <p>
                 Mark Justin Roiland is a writer, animator, director, producer, and the co-creator of the
                 popular show "Rick and Morty." He provided the voices for Rick and Morty from Season 1 to
@@ -117,6 +117,10 @@
         height: 500px;
         padding: 20px;
     }
+
+    .card:hover {
+    background-color: black; 
+  }
 
     .content {
         display: flex;
