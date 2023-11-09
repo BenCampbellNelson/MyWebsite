@@ -120,9 +120,21 @@
 					style="width: 100%; font-size: 1em; border-radius: 50px;"
 				/>
 			</label>
-			<div>
-				<button class="skip-button" on:click={() => { scoreMinus(); fetchRandomCharacter(); }}>Skip to Next Character (-1 point)</button>
-				<button class="hint-button" on:click={() => { scoreMinus(); toggleHints(); }}>Show Hint (-1 point)</button>
+			<div class="buttons">
+				<button
+					class="skip-button"
+					on:click={() => {
+						scoreMinus();
+						fetchRandomCharacter();
+					}}>Skip to Next Character (-1 point)</button
+				>
+				<button
+					class="hint-button"
+					on:click={() => {
+						scoreMinus();
+						toggleHints();
+					}}>Show Hint (-1 point)</button
+				>
 				<button type="submit">Submit Guess</button>
 			</div>
 		</form>
@@ -137,6 +149,29 @@
 </div>
 
 <style>
+	.buttons {
+		display: flex;
+	}
+	button:active {
+		box-shadow: none;
+		transform: translate(3px, 3px);
+	}
+
+	.hint-button,
+	form button[type='submit'],
+	.skip-button {
+		font-family: var(--main-font-family);
+		font-size: 1.5rem;
+		color: #fafafa;
+		text-transform: uppercase;
+		padding: 10px 20px;
+		border-radius: 10px;
+		border: 2px solid #fafafa;
+		background: #252525;
+		box-shadow: 3px 3px #fafafa;
+		cursor: pointer;
+		margin: 35px 0;
+	}
 
 	.input {
 		display: flex;
@@ -165,20 +200,6 @@
 		max-width: 100%;
 		height: auto;
 		border-radius: 20px;
-	}
-
-	.hint-button,
-	form button[type='submit'],
-	.skip-button {
-		background-color: #007bff;
-		color: white;
-		border: none;
-		padding: 2% 4%;
-		margin: 10px;
-		cursor: pointer;
-		border-radius: 50px;
-		text-transform: uppercase;
-		font-weight: 500;
 	}
 
 	@media (max-width: 800px) {
