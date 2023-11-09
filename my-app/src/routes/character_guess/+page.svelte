@@ -110,8 +110,6 @@
 <div class="pageContainer">
 	<div class="characterGuess">
 		<img class="characterImage" src={character.image} alt="characterImage" />
-		<button class="skip-button" on:click={() => { scoreMinus(); fetchRandomCharacter(); }}>Skip to Next Character (-1 point)</button>
-
 		<form on:submit={checkGuess}>
 			<label class="input">
 				Guess the character's name:
@@ -122,11 +120,14 @@
 					style="width: 100%; font-size: 1em; border-radius: 50px;"
 				/>
 			</label>
-			<button type="submit">Submit Guess</button>
+			<div>
+				<button class="skip-button" on:click={() => { scoreMinus(); fetchRandomCharacter(); }}>Skip to Next Character (-1 point)</button>
+				<button class="hint-button" on:click={() => { scoreMinus(); toggleHints(); }}>Show Hint (-1 point)</button>
+				<button type="submit">Submit Guess</button>
+			</div>
 		</form>
 		<div class="score">Score: {score}</div>
 		<div id="message" style="display: none;" />
-		<button class="hint-button" on:click={() => { scoreMinus(); toggleHints(); }}>Show Hint (-1 point)</button>
 		<div class="hint">
 			{#if showHints}
 				<h1>{characterNameHints}</h1>
@@ -136,8 +137,6 @@
 </div>
 
 <style>
-	.hint {
-	}
 
 	.input {
 		display: flex;
