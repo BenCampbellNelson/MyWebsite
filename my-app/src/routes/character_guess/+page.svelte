@@ -1,8 +1,8 @@
 <script>
 	let character_total = 0;
 	let character = [];
-	let guessInput = ''; // Added variable to store the input field value
-	let score = 0; //add score variable
+	let guessInput = ''; 
+	let score = 0; 
 	let characterNameHints = '';
 	let showHints = false;
 
@@ -185,6 +185,7 @@
 		font-weight: 500;
 		text-transform: uppercase;
 		font-size: 2vw;
+		color: white;
 	}
 
 	.characterGuess form {
