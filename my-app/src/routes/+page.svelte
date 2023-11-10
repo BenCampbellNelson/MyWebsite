@@ -41,10 +41,10 @@
 		width: 100%;
 		padding: 10px 0;
 		font-size: 16px;
-		color: #fff;
+		color: var(--form-secondary-colour);
 		margin-bottom: 30px;
 		border: none;
-		border-bottom: 1px solid #fff;
+		border-bottom: 1px solid var(--form-secondary-colour);
 		outline: none;
 		background: transparent;
 	}
@@ -55,7 +55,7 @@
 		left: 0;
 		padding: 10px 0;
 		font-size: 16px;
-		color: #fff;
+		color: var(--form-secondary-colour);
 		pointer-events: none;
 		transition: 0.5s;
 	}
@@ -72,7 +72,7 @@
 		position: relative;
 		display: inline-block;
 		padding: 10px 20px;
-		color: #ffffff;
+		color: var(--form-secondary-colour);
 		font-size: 16px;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -85,7 +85,7 @@
 
 	.login-box a:hover {
 		background: var(--secondary-colour);
-		color: #fff;
+		color: var(--form-secondary-colour);
 	}
 
 	@media (max-width: 800px) {
