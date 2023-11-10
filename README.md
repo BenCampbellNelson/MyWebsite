@@ -35,17 +35,17 @@ Start the development server: npm run dev -- --open
 
 ## Future
 
-User accounts
+### User accounts
 
 I'd like to have functioning user accounts that users can log in with and keep track of their scores. I need to get a better understanding of user accounts and creating my own API's in intro app dev before I can begin that sort of thing.
 
-More games
+### More games
 
 I'd like to create some more games, like trivia, or guess what episode this charcater first appeared in games like that
 
-Flesh out site
+### Flesh out site
 
- I'd like to keep adding to the information available on the site so users can feel like just by being on the site they can get better at the games.
+I'd like to keep adding to the information available on the site so users can feel like just by being on the site they can get better at the games.
 
 ## License
 
