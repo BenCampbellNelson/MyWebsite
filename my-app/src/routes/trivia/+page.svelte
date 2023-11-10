@@ -121,7 +121,7 @@
 		border-radius: 10px;
 		margin: 20px;
 		padding: 20px;
-		background-color: #b5edfc;
+		background-color: #B7E4F999;
 	}
 
 	.content {

@@ -1,7 +1,6 @@
 
 
 <div class ="footer">
-    <h1>this is the footer</h1>
     <div class="footerNav">
         <ul class="nav_list">
 			<li class="nav_item">
@@ -31,7 +30,7 @@
         display: flex;
         margin-top: auto;
         flex-direction: column;
-        background-color: var(--main-colour);
+        background-color: #B7E4F999;
         color: white;
         align-items: center;
         font-size: 1vw;
