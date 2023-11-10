@@ -1,8 +1,9 @@
+<!--JAVASCRIPT-->
 <script>
 	let character_total = 0;
 	let character = [];
-	let guessInput = ''; 
-	let score = 0; 
+	let guessInput = '';
+	let score = 0;
 	let characterNameHints = '';
 	let showHints = false;
 
@@ -107,6 +108,7 @@
 	fetchRandomCharacter();
 </script>
 
+<!--HTML-->
 <div class="pageContainer">
 	<div class="characterGuess">
 		<img class="characterImage" src={character.image} alt="characterImage" />
@@ -148,6 +150,7 @@
 	</div>
 </div>
 
+<!--CSS-->
 <style>
 	.buttons {
 		display: flex;
@@ -201,11 +204,18 @@
 		max-width: 100%;
 		height: auto;
 		border-radius: 20px;
+		margin: 20px;
 	}
 
 	@media (max-width: 800px) {
 		.characterGuess {
 			font-size: 5vw;
+		}
+
+		.hint-button,
+		form button[type='submit'],
+		.skip-button {
+			font-size: 0.7rem;
 		}
 	}
 </style>

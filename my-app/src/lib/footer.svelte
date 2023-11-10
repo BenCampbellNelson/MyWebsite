@@ -1,5 +1,5 @@
 
-
+<!--HTML-->
 <div class ="footer">
     <div class="footerNav">
         <ul class="nav_list">
@@ -25,6 +25,7 @@
 </div>
 
 
+<!--CSS-->
 <style>
     .footer{
         display: flex;

@@ -1,3 +1,4 @@
+<!--HTML-->
 <div class="login-box">
 	<form>
 		<div class="user-box">
@@ -16,6 +17,7 @@
 	</form>
 </div>
 
+<!--CSS-->
 <style>
 	.login-box {
 		position: absolute;

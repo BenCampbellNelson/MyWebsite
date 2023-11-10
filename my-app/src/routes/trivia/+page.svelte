@@ -73,6 +73,8 @@
 
 </div>
 
+
+<!--CSS-->
 <style>
 	.card {
 		display: flex;

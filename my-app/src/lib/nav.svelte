@@ -1,3 +1,4 @@
+
 <script>
 	import { createEventDispatcher } from 'svelte';
 
@@ -8,6 +9,7 @@
 	}
 </script>
 
+<!--HTML-->
 <div class="nav background-image is-active" data-ref="nav">
 	<div class="nav_background" />
 	<div class="nav_inner">
@@ -32,6 +34,8 @@
 	</div>
 </div>
 
+
+<!--CSS-->
 <style>
 
 	.nav {

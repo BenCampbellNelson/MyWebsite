@@ -1,8 +1,10 @@
+<!--JAVASCRIPT-->
 <script>
     import Footer from '../lib/footer.svelte';
     import Header from '../lib/header.svelte';
 </script>
 
+<!--HTML-->
 <Header />
 <div class="backgroundImage"></div>
 
@@ -10,6 +12,7 @@
 
 <Footer />
 
+<!--CSS-->
 <style>
 .backgroundImage {
     background-image: url('/images/RickInTheCorner.jpg');

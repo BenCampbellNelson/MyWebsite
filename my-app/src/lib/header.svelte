@@ -1,3 +1,4 @@
+<!--JAVASCRIPT-->
 <script>
 	import { onMount } from 'svelte';
 	import Nav from './nav.svelte';
@@ -19,6 +20,7 @@
 	}
 </script>
 
+<!--HTML-->
 <div class="header-container">
 	<header class="header">
 		<div class="header_inner">
@@ -37,6 +39,8 @@
 	{/if}
 </div>
 
+
+<!--CSS-->
 <style>
 	.header-container {
 		position: relative;
