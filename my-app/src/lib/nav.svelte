@@ -16,7 +16,7 @@
 				<a class="nav_link is-active" href="/" on:click={hideNavigation}>HOME</a>
 			</li>
 			<li class="nav_item heading">
-				<a class="nav_link is-active" href="/trivia" on:click={hideNavigation}>TRIVIA</a>
+				<a class="nav_link is-active" href="/trivia" on:click={hideNavigation}>Creators</a>
 			</li>
 			<li class="nav_item heading">
 				<a class="nav_link is-active" href="/character_guess" on:click={hideNavigation}

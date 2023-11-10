@@ -65,7 +65,6 @@
 	.button:hover {
 		background: var(--secondary-colour);
 		color: #fff;
-		border-radius: 5px;
 		box-shadow: 0 0 5px var(--secondary-colour), 0 0 25px var(--secondary-colour),
 			0 0 50px var(--secondary-colour), 0 0 100px var(--secondary-colour);
 		transform: scale(1.1);
