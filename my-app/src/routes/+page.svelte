@@ -60,12 +60,14 @@
 		transition: 0.5s;
 	}
 
+
 	.login-box .user-box input:focus ~ label {
 		top: -20px;
 		left: 0;
 		color: #bdb8b8;
 		font-size: 12px;
 	}
+
 
 	.login-box form a {
 		position: relative;

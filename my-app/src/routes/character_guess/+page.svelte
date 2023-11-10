@@ -104,7 +104,7 @@
 			messageElement.style.display = 'block';
 
 			setTimeout(() => {
-				messageElement.style.display = 'none';
+				messageElement.style.display = 'none';//so the message doesn't stay on the screen
 			}, 3000);
 
 			guessInput = '';
@@ -180,9 +180,9 @@
 		text-transform: uppercase;
 		padding: 10px 20px;
 		border-radius: 10px;
-		border: 2px solid #fafafa;
+		border: 2px solid var(--tertiary-colour);
 		background: #252525;
-		box-shadow: 3px 3px #fafafa;
+		box-shadow: 3px 3px var(--tertiary-colour);
 		cursor: pointer;
 		margin: 35px 0;
 	}
