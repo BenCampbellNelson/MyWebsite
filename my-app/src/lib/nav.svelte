@@ -87,4 +87,16 @@
             background-size: contain;
         }
     }
+
+	@media (max-width: 800px) {
+        .background-image {
+            background-image: none; /* Remove the background image */
+            background-color: var(--main-colour); /* Set the background color */
+        }
+
+		.nav_list a {
+			padding: 20px;
+			font-size: 12vw;
+		}
+    }
 </style>
