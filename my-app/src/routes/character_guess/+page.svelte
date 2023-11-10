@@ -9,6 +9,7 @@
 
 	const BASE_URL = 'https://rickandmortyapi.com';
 
+	//Have the fetches inside of the function to call on in code
 	function fetchRandomCharacter() {
 		fetch(BASE_URL + '/api/character')
 			.then((res) => res.json())
@@ -17,11 +18,12 @@
 				console.log(data);
 
 				let character_id = [];
-
+				
+				//generate a random charcater
 				character_id = Math.floor(Math.random() * character_total);
 
 				console.log(character);
-
+				//fetch that random character
 				fetch(`${BASE_URL}/api/character/${character_id}`)
 					.then((res) => res.json())
 					.then((data2) => {
@@ -34,6 +36,7 @@
 		showHints = false;
 	}
 
+	// Function to generate hints for the character's name
 	function generateNameHints() {
 		const name = character.name;
 		let hint = '';
@@ -52,6 +55,7 @@
 		characterNameHints = hint;
 	}
 
+	// Function to toggle the display of hints
 	function toggleHints() {
 		showHints = !showHints;
 
@@ -62,14 +66,17 @@
 		}
 	}
 
+	// Function to update the player's score
 	function updateScore() {
 		score++;
 	}
 
+	// Function to clear the player's score
 	function clearScore() {
 		score = 0;
 	}
 
+	// Function to decrement the player's score
 	function scoreMinus() {
 		if (score >= 1) {
 			score--;

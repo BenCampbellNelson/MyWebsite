@@ -16,11 +16,8 @@
 				<a class="nav_link" href="/episode_guess">EPISODE GUESS</a>
 			</li>
     </div>
-    <div class ="socialMedia">
-        social
-    </div>
-    <div class = "copyRight">
-        copyright
+    <div class="copyRight">
+        &copy; R&MBen
     </div>
 </div>
 
@@ -31,7 +28,7 @@
         display: flex;
         margin-top: auto;
         flex-direction: column;
-        background-color: #B7E4F999;
+        background-color: var(--tertiary-colour);
         color: white;
         align-items: center;
         font-size: 1vw;

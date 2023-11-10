@@ -54,8 +54,8 @@
 		font-family: var(--main-font-family);
 		font-weight: 500;
 		text-transform: uppercase;
-		background-color: white;
-		color: #ffffff;
+		background-color: var(--tertiary-colour);
+		color: var(--tertiary-colour);
 		padding: 15px 30px;
 		border: none;
 		border-radius: 50px;
