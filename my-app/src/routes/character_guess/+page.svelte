@@ -160,6 +160,10 @@
 		transform: translate(3px, 3px);
 	}
 
+	button:hover {
+		background: #FF5F1F;
+	}
+
 	.hint-button,
 	form button[type='submit'],
 	.skip-button {
