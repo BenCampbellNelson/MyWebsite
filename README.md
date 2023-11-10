@@ -14,6 +14,7 @@ Charcter guessing game with hints, score system and and ability to skip to next 
 
 Structured website with easy scalability
 
+
 ## Technologies
 
 SvelteKit, a framework for building web based applications
@@ -21,7 +22,7 @@ SvelteKit, a framework for building web based applications
 HTML, CSS, and JavaScript
 
 
-## Installationg
+## Installation
 
 Clone the repository
 
@@ -36,7 +37,7 @@ Start the development server: npm run dev -- --open
 
     -User accounts
 
-        I'd like to have functioning user accounts that users can log in with and keep track of their scores
+        I'd like to have functioning user accounts that users can log in with and keep track of their scores. I need to get a better understanding of user accounts and creating my own API's in intro app dev before I can begin that sort of thing.
 
     -More games
 
